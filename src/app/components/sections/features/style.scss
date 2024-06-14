@@ -1,0 +1,125 @@
+@import "@/app/styles/mixins.scss";
+.features {
+  position: relative;
+  @include adaptiveValue("padding-top", 150, 50, 0, 1920, 768);
+
+  padding: 0 20px;
+  &__card {
+    transition: transform 0.3s ease 0s;
+    &:hover {
+      transform: translate(0px, -10px);
+    }
+  }
+  &__cards {
+    @include adaptiveValue("margin-top", 100, 30, 0, 1920, 768);
+    display: flex;
+    justify-content: center;
+    @include adaptiveValue("gap", 32, 10, 0, 1920, 768);
+    flex-wrap: wrap;
+    max-width: 1417px;
+    margin: 0 auto;
+  }
+  .Decor1 {
+    position: absolute;
+    z-index: -1;
+    left: 20px;
+    bottom: -150px;
+    object-fit: contain;
+    @include adaptiveValue("width", 180, 100, 0, 1920, 768);
+    @include adaptiveValue("height", 410, 200, 0, 1920, 768);
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+}
+.featuresCard {
+  max-width: 451px;
+  flex: 1 1 25%;
+  padding: 3px;
+  border-radius: 22px;
+  @media (max-width: 768px) {
+    padding: 2px;
+    @include adaptiveValue("border-radius", 20, 10, 0, 768, 320);
+    flex: 1 1 40%;
+  }
+
+  &__wraper {
+    height: 100%;
+    background: #000;
+    border-radius: 22px;
+    padding: 36px 45px;
+    @include adaptiveValue("border-radius", 22, 20, 0, 1920, 768);
+    @include adaptiveValue("padding-top", 36, 10, 0, 1920, 768);
+    @include adaptiveValue("padding-bottom", 36, 30, 0, 1920, 768);
+    @include adaptiveValue("padding-left", 45, 20, 0, 1920, 768);
+    @include adaptiveValue("padding-right", 45, 20, 0, 1920, 768);
+
+    @media (max-width: 768px) {
+      @include adaptiveValue("border-radius", 20, 10, 0, 768, 320);
+      @include adaptiveValue("padding-top", 36, 10, 0, 768, 320);
+      @include adaptiveValue("padding-bottom", 36, 20, 0, 768, 320);
+      @include adaptiveValue("padding-left", 45, 10, 0, 768, 320);
+      @include adaptiveValue("padding-right", 45, 10, 0, 768, 320);
+    }
+
+    display: flex;
+    gap: 8px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  background: linear-gradient(70deg, #fff 0%, #fceb57 100%);
+  &__image {
+    &_wraper {
+      @include adaptiveValue("width", 95, 60, 0, 1920, 768);
+      @include adaptiveValue("height", 95, 60, 0, 1920, 768);
+      @include adaptiveValue("padding", 3, 2, 0, 1920, 768);
+
+      @media (max-width: 768px) {
+        @include adaptiveValue("width", 60, 30, 0, 768, 320);
+        @include adaptiveValue("height", 60, 30, 0, 768, 320);
+        padding: 1px;
+      }
+      background: linear-gradient(70deg, #fff 0%, #fceb57 100%);
+      border-radius: 50%;
+      padding: 3px;
+    }
+    background: #000;
+    border-radius: 50%;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    img {
+      position: absolute;
+      width: 65%;
+      height: 65%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      object-fit: contain;
+    }
+  }
+  h4 {
+    font-weight: 800;
+    @include adaptiveValue("font-size", 36, 20, 0, 1920, 768);
+    line-height: 110%;
+    text-align: center;
+    @media (max-width: 768px) {
+      @include adaptiveValue("font-size", 20, 14, 0, 1920, 768);
+    }
+  }
+  p {
+    flex: 1 1 auto;
+    font-weight: 400;
+    @include adaptiveValue("font-size", 20, 14, 0, 1920, 768);
+    line-height: 100%;
+    text-align: center;
+    @media (max-width: 768px) {
+      line-height: 105%;
+      @include adaptiveValue("font-size", 14, 10, 0, 1920, 768);
+    }
+  }
+}

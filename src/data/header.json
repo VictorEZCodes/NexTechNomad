@@ -1,0 +1,24 @@
+{
+  "links": [
+    {
+      "text": "About Us",
+      "link": "/#AboutUs"
+    },
+    {
+      "text": "Services",
+      "link": "/#Services"
+    },
+    {
+      "text": "Features",
+      "link": "/#Features"
+    },
+    {
+      "text": "Testimonials",
+      "link": "/#Testimonials"
+    },
+    {
+      "text": "Partners",
+      "link": "/partners"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "headingOFSection": "FAQ",
+  "listOfQuestions": [
+    {
+      "heading": "How to contact us ?",
+      "text": "We value your inquiries and are here to assist you. To get in touch with us, simply submit your contact information through our contact form. Once you have submitted your details, our team will reach out to you within 24 hours to address your questions or concerns."
+    },
+    {
+      "heading": "How secure is it ?",
+      "text": "At NexTech, we prioritize the security of your data and applications. Our team employs industry-leading security practices to ensure that your information is protected at all times. We implement robust encryption protocols, regular security audits, and strict access controls to safeguard against unauthorized access and breaches. You can trust that our solutions are designed with the highest standards of security to keep your data safe."
+    },
+    {
+      "heading": "What services do you offer ?",
+      "text": "We offer a comprehensive range of services to meet your business needs, including web development, blockchain solutions, mobile app development, UI/UX design, and more. Our team is skilled in both Web2 and Web3 technologies, ensuring that we can provide innovative solutions tailored to your requirements."
+    },
+    {
+      "heading": "What is your pricing model ?",
+      "text": "Our pricing model is flexible and tailored to the specific needs of each project. We offer both fixed-price and hourly rate options, depending on the scope and complexity of the work. During the initial consultation, we will provide a detailed estimate and work with you to find a pricing plan that fits your budget."
+    },
+    {
+      "heading": "Do you offer custom solutions ?",
+      "text": "Yes, we specialize in creating custom solutions tailored to the unique needs of each client. Whether you need a bespoke web application, a tailored blockchain solution, or a custom mobile app, our team has the expertise to develop a solution that meets your specific requirements."
+    },
+    {
+      "heading": "How do you handle support ?",
+      "text": "We offer comprehensive support and maintenance services to ensure that your applications remain up-to-date and fully functional. Our team is available to address any issues that arise and provide regular updates and improvements as needed. Support packages can be customized based on your specific requirements."
+    }
+  ]
+}

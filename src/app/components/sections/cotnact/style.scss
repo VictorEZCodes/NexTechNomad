@@ -1,0 +1,156 @@
+@import "@/app/styles/mixins.scss";
+.contactUs {
+  position: relative;
+  .Decor2 {
+    position: absolute;
+    max-width: 100%;
+    //  background: #ffffff;
+    @include adaptiveValue("height", 2200, 700, 0, 1920, 768);
+    @include adaptiveValue("width", 1300, 400, 0, 1920, 768);
+    @media (max-width: 768px) {
+      @include adaptiveValue("height", 700, 600, 0, 768, 320);
+      @include adaptiveValue("width", 400, 300, 0, 768, 768);
+    }
+    top: -50px;
+    right: 0;
+    z-index: -1;
+  }
+  .Decor1 {
+    position: absolute;
+    right: -140px;
+    bottom: -100px;
+    object-fit: contain;
+    z-index: -1;
+    @include adaptiveValue("width", 140, 20, 0, 1920, 768);
+    @include adaptiveValue("height", 140, 20, 0, 1920, 768);
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+  .errors {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    font-weight: 400;
+    color: #ff2a2a;
+  }
+  .decor {
+    position: absolute;
+    z-index: -1;
+    width: 750px;
+    height: 1200px;
+    @include adaptiveValue("height", 1200, 400, 0, 1920, 768);
+    @include adaptiveValue("width", 750, 200, 0, 1920, 768);
+    @media (max-width: 768px) {
+      @include adaptiveValue("height", 700, 300, 0, 768, 320);
+      @include adaptiveValue("width", 350, 100, 0, 768, 320);
+      transform: rotate(180deg) translate(0, 0);
+    }
+    top: 0;
+    left: 0;
+    transform: rotate(180deg) translate(0, 30%);
+  }
+  @include adaptiveValue("padding-top", 200, 50, 0, 1920, 768);
+  &__content {
+    position: relative;
+    max-width: 1547px;
+    padding: 0 20px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+
+    @include adaptiveValue("margin-top", 40, 30, 0, 1920, 768);
+    @media (max-width: 768px) {
+      align-items: center;
+      gap: 40px;
+    }
+  }
+  &__text {
+    font-weight: 900;
+    text-align: center;
+    @include adaptiveValue("font-size", 44, 35, 0, 1920, 768);
+    @media (max-width: 768px) {
+      text-align: center;
+      @include adaptiveValue("font-size", 30, 20, 0, 768, 320);
+      flex: 1 1 auto;
+    }
+    line-height: 100%;
+    text-transform: uppercase;
+    text-shadow: 1px 3px 5px #fceb57ed;
+    max-width: 1279px;
+  }
+  &__form {
+    flex: 0 1 100%;
+    max-width: 553px;
+    @include adaptiveValue(" max-width", 553, 350, 0, 1920, 768);
+    display: flex;
+    flex-direction: column;
+    @include adaptiveValue("gap", 60, 50, 0, 1920, 768);
+    align-items: center;
+
+    font-weight: 700;
+    font-size: 32px;
+    @include adaptiveValue("font-size", 32, 18, 0, 1920, 768);
+    line-height: 100%;
+    ::placeholder {
+      color: rgb(255, 255, 255);
+    }
+
+    ::-ms-input-placeholder {
+      /* Edge 12 -18 */
+      color: rgb(255, 255, 255);
+    }
+    .inpoutDecor {
+      position: relative;
+      width: 100%;
+      &::before {
+        transition: all 0.3s ease 0s;
+        content: "";
+        background: linear-gradient(45deg, #fff 0%, #fceb57 100%);
+        position: absolute;
+        width: 97%;
+        height: 3px;
+        border-radius: 3px;
+        bottom: 0;
+        left: 0;
+      }
+      &:hover {
+        &::before {
+          width: 100%;
+        }
+      }
+    }
+    input {
+      outline: none;
+      @include adaptiveValue("padding", 17, 8, 0, 1920, 768);
+    }
+  }
+  &__textarea {
+    width: 100%;
+    @include adaptiveValue("border-radius", 20, 10, 0, 1920, 768);
+
+    background: linear-gradient(45deg, #fff 0%, #fceb57 100%);
+    padding: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media (max-width: 768px) {
+      padding: 2px;
+    }
+
+    textarea {
+      height: 100%;
+      @include adaptiveValue("border-radius", 20, 10, 0, 1920, 768);
+
+      background: #000;
+      outline: none;
+      @include adaptiveValue("padding", 17, 15, 0, 1920, 768);
+      resize: none;
+    }
+  }
+}

@@ -1,0 +1,142 @@
+@import "@/app/styles/mixins.scss";
+.heroText {
+  max-width: 1520px;
+  display: block;
+  font-weight: 900;
+  @include adaptiveValue("font-size", 200, 90, 0, 1520, 768);
+  @media (max-width: 768px) {
+    @include adaptiveValue("font-size", 90, 35, 0, 768, 320);
+  }
+  text-transform: uppercase;
+  text-align: center;
+  background: radial-gradient(
+    150.72% 50% at 50% 50%,
+    rgb(255, 255, 255) 52.99999713897705%,
+    rgb(252, 235, 87) 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  //   text-shadow: 3px 3px 34px #e0cf36;
+  filter: drop-shadow(1px 3px 10px rgba(252, 235, 87, 0.7));
+  background: radial-gradient(
+    54.72% 150% at 50% 50%,
+    rgb(255, 255, 255) 52.99999713897705%,
+    rgb(252, 235, 87) 95%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  span {
+    @include adaptiveValue("font-size", 40, 10, 0, 1520, 768);
+  }
+}
+
+.HeroSection {
+  min-height: 100vh;
+  padding: 200px 40px;
+  @include adaptiveValue("padding-top", 200, 100, 0, 1520, 768);
+  @include adaptiveValue("padding-bottom", 200, 100, 0, 1520, 768);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  &__text {
+    position: relative;
+    //  background: #e88282;
+  }
+  &__decor {
+    &_1 {
+      position: absolute;
+      @include adaptiveValue("width", 64, 20, 0, 1520, 768);
+      @include adaptiveValue("height", 64, 20, 0, 1520, 768);
+
+      @include adaptiveValue("top", 30, 10, 0, 1520, 768);
+      @include adaptiveValue("right", 30, 10, 0, 1520, 768);
+
+      @media (max-width: 768px) {
+        @include adaptiveValue("width", 20, 12, 0, 768, 320);
+        @include adaptiveValue("height", 20, 12, 0, 768, 320);
+
+        @include adaptiveValue("top", 10, 3, 0, 768, 320);
+        @include adaptiveValue("right", 10, 3, 0, 768, 320);
+      }
+    }
+    &_2 {
+      position: absolute;
+      transform: rotate(9deg);
+      @include adaptiveValue("width", 103, 20, 0, 1520, 768);
+      @include adaptiveValue("height", 103, 20, 0, 1520, 768);
+
+      @include adaptiveValue("bottom", -170, 10, 0, 1520, 768);
+      @include adaptiveValue("left", -140, 10, 0, 1520, 768);
+
+      @media (max-width: 1520px) {
+        @include adaptiveValue("width", 103, 40, 0, 1520, 768);
+        @include adaptiveValue("height", 103, 40, 0, 1520, 768);
+
+        @include adaptiveValue("bottom", -100, -43, 0, 1520, 768);
+        @include adaptiveValue("left", -10, 10, 0, 1520, 768);
+      }
+      @media (max-width: 768px) {
+        @include adaptiveValue("width", 22, 15, 0, 768, 320);
+        @include adaptiveValue("height", 23, 15, 0, 768, 320);
+
+        @include adaptiveValue("bottom", -40, -23, 0, 768, 320);
+      }
+    }
+    &_line {
+      position: absolute;
+      width: 100%;
+      top: 100%;
+      left: 0;
+      transform: translate(0%, -50%);
+    }
+    &_row {
+      position: absolute;
+      right: 0;
+      top: 0;
+      // transform: translate(0px, -0%);
+      // width: 379px;
+      // height: 379px;
+      @include adaptiveValue("width", 336, 120, 0, 1920, 768);
+      @include adaptiveValue("height", 179, 70, 0, 1920, 768);
+      @media (max-width: 768px) {
+        transform: scale(-1, 1);
+        //   width: 200px;
+        //   height: 200px;
+        left: 0;
+        //   display: none;
+      }
+    }
+  }
+
+  .HeroSection__button {
+    @include adaptiveValue("margin-top", 45, 20, 0, 1920, 768);
+    position: relative;
+    overflow: hidden;
+    @include adaptiveValue("padding-top", 20, 10, 0, 1920, 768);
+    @include adaptiveValue("padding-bottom", 20, 10, 0, 1920, 768);
+    @include adaptiveValue("padding-right", 58, 23, 0, 1920, 768);
+    @include adaptiveValue("padding-left", 58, 23, 0, 1920, 768);
+    background: linear-gradient(140deg, #fff 50%, #fceb57 100%);
+    &::before {
+      background: #000;
+      content: "";
+      position: absolute;
+      width: 97%;
+      height: 90%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 7px;
+    }
+    span {
+      position: relative;
+      z-index: 1;
+      color: white;
+    }
+  }
+}

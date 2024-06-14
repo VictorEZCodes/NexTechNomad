@@ -1,0 +1,30 @@
+{
+  "headingOFSection": "OUR FEATURES",
+  "list": [
+    {
+      "image": "/icons/starBadge.svg",
+      "heading": "Web Development",
+      "text": "Tailored web solutions that meet your unique business needs, ensuring a seamless user experience and robust functionality."
+    },
+    {
+      "image": "/icons/starBadge.svg",
+      "heading": "Blockchain Integration",
+      "text": "Leveraging blockchain technology to enhance security, transparency, and efficiency in your business processes."
+    },
+    {
+      "image": "/icons/starBadge.svg",
+      "heading": "Responsive Design",
+      "text": "Creating mobile-friendly designs that provide a consistent and engaging user experience across all devices."
+    },
+    {
+      "image": "/icons/starBadge.svg",
+      "heading": "UI/UX Design",
+      "text": "Crafting intuitive and visually appealing interfaces that enhance user satisfaction and drive engagement."
+    },
+    {
+      "image": "/icons/starBadge.svg",
+      "heading": "Agile Development",
+      "text": "Utilizing agile methodologies to ensure efficient project management, timely delivery, and adaptability to changes."
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+@import "@/app/styles/mixins.scss";
+.faq {
+  display: flex;
+  flex-direction: column;
+  gap: 96px;
+  @include adaptiveValue("gap", 96, 30, 0, 1920, 768);
+  max-width: 1591px;
+  margin: 0 auto;
+  padding: 0 20px;
+  @include adaptiveValue("margin-top", 123, 70, 0, 1920, 768);
+}

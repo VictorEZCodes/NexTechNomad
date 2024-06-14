@@ -1,0 +1,42 @@
+@import "@/app/styles/mixins.scss";
+
+.list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  @include adaptiveValue("gap", 37, 20, 0, 1920, 768);
+  .li {
+    font-size: 24px;
+    @include adaptiveValue("font-size", 24, 14, 0, 1920, 768);
+    line-height: 100%;
+    text-align: center;
+
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      bottom: -5px;
+      left: 0;
+      transform: translate(-20px, 0px);
+      border-radius: 5px;
+      background: linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0) 6.5%,
+        rgb(252, 235, 87, 1) 68.5%
+      );
+      width: 70%;
+      transition: all 0.3s ease 0s;
+      opacity: 0;
+    }
+    &:hover {
+      &::before {
+        transform: translate(10px, 0px);
+        width: 80%;
+        opacity: 1;
+      }
+    }
+  }
+}

@@ -1,0 +1,59 @@
+@import "@/app/styles/mixins.scss";
+.footer {
+  margin-top: 140px;
+  padding: 54px 20px;
+  @include adaptiveValue("padding-bottom", 54, 30, 0, 1920, 768);
+  @include adaptiveValue("margin-top", 140, 50, 0, 1920, 768);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  &__heading {
+    font-family: var(--font-family);
+    font-weight: 900;
+    line-height: 100%;
+    text-transform: uppercase;
+    text-align: center;
+
+    text-shadow: 3px 3px 7px rgba(255, 255, 255, 0.74);
+
+    @include adaptiveValue("font-size", 96, 30, 0, 1920, 768);
+    margin-bottom: 24px;
+    max-width: 1540px;
+  }
+  &__text {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 100%;
+    text-transform: uppercase;
+    text-align: center;
+
+    @include adaptiveValue("font-size", 20, 14, 0, 1920, 768);
+    @include adaptiveValue("margin-bottom", 31, 10, 0, 1920, 768);
+    max-width: 814px;
+  }
+  &__info {
+    font-weight: 900;
+    font-size: 24px;
+    @include adaptiveValue("font-size", 24, 17, 0, 1920, 768);
+
+    line-height: 100%;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: underline;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include adaptiveValue("margin-bottom", 44, 10, 0, 1920, 768);
+  }
+  &__socials {
+    display: flex;
+    gap: 20px;
+    a {
+      transition: all 0.3s ease 0s;
+      &:hover {
+        scale: 1.1;
+      }
+    }
+  }
+}

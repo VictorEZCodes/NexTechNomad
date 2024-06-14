@@ -1,0 +1,226 @@
+// .sliderScroll {
+//   overflow: hidden;
+//   position: absolute;
+//   width: 46.5%;
+//   bottom: -151px;
+//   left: 50%;
+//   transform: translate(-50%, 0px);
+//   height: 12px;
+//   background: #d9d9d9;
+//   border-radius: 12px;
+// }
+// .sliderScrollItem {
+//   border-radius: 12px;
+//   height: 100%;
+//   background: linear-gradient(100deg, #3b14d5 0%, #8014d5 100%);
+//   cursor: pointer;
+// }
+@import "@/app/styles/mixins.scss";
+
+.info {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  max-width: 80%;
+  @media (max-width: 768px) {
+    max-width: none;
+  }
+  &__text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    h5 {
+      font-weight: 900;
+      line-height: 100%;
+      @include adaptiveValue("font-size", 24, 14, 0, 1920, 768);
+
+      background: linear-gradient(90deg, #fff 40%, #fceb57 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    p {
+      font-weight: 400;
+      @include adaptiveValue("font-size", 16, 10, 0, 1920, 768);
+      line-height: 100%;
+      color: #999;
+    }
+  }
+}
+.Testimonials {
+  .heading {
+    width: 100%;
+    overflow: hidden;
+  }
+  position: relative;
+  .Decor1 {
+    position: absolute;
+    right: 40px;
+    top: 00px;
+    object-fit: contain;
+    z-index: -1;
+    @include adaptiveValue("width", 140, 20, 0, 1920, 768);
+    @include adaptiveValue("height", 140, 20, 0, 1920, 768);
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+  @include adaptiveValue("padding-top", 150, 70, 0, 1920, 768);
+  &__wraper {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @include adaptiveValue("padding-top", 50, 25, 0, 1920, 768);
+    @include adaptiveValue("padding-bottom", 50, 25, 0, 1920, 768);
+    @include adaptiveValue("padding-right", 79, 20, 0, 1920, 768);
+    @include adaptiveValue("padding-left", 79, 20, 0, 1920, 768);
+    @include adaptiveValue("border-radius", 26, 10, 0, 1920, 768);
+    background: #000000;
+    width: 100%;
+    height: 100%;
+    gap: 33px;
+  }
+  &__image {
+    position: relative;
+    flex: 0 0 70px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+}
+
+.slide {
+  @include adaptiveValue("padding-right", 100, 65, 0, 1920, 768);
+  @include adaptiveValue("padding-left", 100, 65, 0, 1920, 768);
+  @include adaptiveValue("gap", 59, 20, 0, 1920, 768);
+  flex-direction: column;
+  cursor: grab;
+  display: flex;
+  @media (max-width: 768px) {
+    padding: 0 20px;
+  }
+}
+
+.slider {
+  max-width: 1500px;
+  @include adaptiveValue(" margin-top", 70, 30, 0, 1920, 768);
+  padding-bottom: 60px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  display: flex;
+  align-items: stretch;
+  @include adaptiveValue("gap", 59, 20, 0, 1920, 768);
+  justify-content: center;
+  .item {
+    position: relative;
+    &:nth-child(1) {
+      @include adaptiveValue("left", 100, 40, 0, 1920, 768);
+
+      left: 100px;
+    }
+    &:nth-child(2) {
+      @include adaptiveValue("left", 100, 40, 0, 1920, 768);
+
+      left: 100px;
+    }
+    &:nth-child(3) {
+      right: 100px;
+      @include adaptiveValue("right", 100, 40, 0, 1920, 768);
+    }
+    &:nth-child(4) {
+      right: 100px;
+      @include adaptiveValue("right", 100, 40, 0, 1920, 768);
+    }
+    @media (max-width: 768px) {
+      &:nth-child(1) {
+        left: 0;
+      }
+      &:nth-child(2) {
+        left: 0;
+      }
+      &:nth-child(3) {
+        right: 0;
+      }
+      &:nth-child(4) {
+        right: 0;
+      }
+      flex: 1 1 100%;
+    }
+    //  max-width: 40%;
+    flex: 1 1 35%;
+    padding: 3px;
+    background: linear-gradient(90deg, #fff 40%, #fceb57 100%);
+    @include adaptiveValue("border-radius", 26, 10, 0, 1920, 768);
+    .text {
+      // flex: 1 1 100%;
+      font-weight: 600;
+      font-size: 24px;
+      @include adaptiveValue("font-size", 24, 14, 0, 1920, 768);
+      line-height: 100%;
+      text-align: center;
+      position: relative;
+      &::before {
+        content: "";
+        height: 3px;
+        background: linear-gradient(90deg, #fff 40%, #fceb57 100%);
+        position: absolute;
+        width: 40%;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 15px);
+        border-radius: 5px;
+      }
+    }
+  }
+}
+
+.pagination {
+  width: 15px !important;
+  height: 15px !important;
+  background: #ffffff !important;
+  border-radius: 50%;
+  display: block;
+  opacity: 1 !important;
+  //   @media (max-width: 768px) {
+  //     width: 10px !important;
+  //     height: 10px !important;
+  //   }
+}
+// .swiper-pagination-bullet {
+//   //   background: #ffffff !important;
+// }
+.swiper-pagination-bullet-active {
+  background: #fceb57 !important;
+}
+
+// .swiper-button-disabled {
+//   z-index: 1;
+// }
+
+// .swiper-button-prev,
+// .swiper-button-next {
+//   top: 100% !important;
+//   //   transform: translate(0px, -10px);
+//   //   height: 13px !important;
+//   scale: 1.3;
+//   &::after {
+//     //  font-weight: 900 !important;
+//     //  color: #ffffff;
+//     //  font-size: 13px !important;
+//   }
+// }
+// .swiper-button-prev {
+//   //   left: 30% !important;
+// }
+// .swiper-pagination {
+//   bottom: 0 !important;
+// }
+// .swiper-button-disabled {
+// }

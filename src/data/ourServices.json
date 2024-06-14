@@ -1,0 +1,35 @@
+{
+  "headingOFSection": "Our Services",
+  "list": [
+    {
+      "image": "/icons/cloud.svg",
+      "heading": "E-commerce Solutions",
+      "text": "Developing robust e-commerce platforms that enhance your online sales and provide a seamless shopping experience for your customers."
+    },
+    {
+      "image": "/icons/cloud.svg",
+      "heading": "Custom Software Development",
+      "text": "Creating bespoke software applications tailored to your specific business processes, helping you achieve greater efficiency and effectiveness."
+    },
+    {
+      "image": "/icons/cloud.svg",
+      "heading": "Maintenance & Support",
+      "text": "Providing ongoing maintenance and support to ensure your applications remain up-to-date, secure, and fully functional."
+    },
+    {
+      "image": "/icons/cloud.svg",
+      "heading": "SEO Optimization",
+      "text": "Implementing cutting-edge SEO strategies to improve your website's visibility, increase traffic, and drive organic growth."
+    },
+    {
+      "image": "/icons/cloud.svg",
+      "heading": "Cloud Solutions",
+      "text": " Offering scalable cloud services to help your business operate more efficiently and securely in the digital landscape."
+    },
+    {
+      "image": "/icons/cloud.svg",
+      "heading": "API Development & Integration",
+      "text": "Designing and integrating APIs to enable seamless communication between your software applications, enhancing functionality and efficiency."
+    }
+  ]
+}

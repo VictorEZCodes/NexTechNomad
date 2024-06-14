@@ -1,0 +1,12 @@
+@import "@/app/styles/mixins.scss";
+.Heading {
+  font-weight: 900;
+  text-align: center;
+  @include adaptiveValue("font-size", 140, 70, 0, 1920, 768);
+  @media (max-width: 768px) {
+    @include adaptiveValue("font-size", 70, 40, 0, 768, 320);
+    text-shadow: 0 2px 3px #fceb57;
+  }
+  text-transform: uppercase;
+  text-shadow: 0 4px 7px #fceb57;
+}

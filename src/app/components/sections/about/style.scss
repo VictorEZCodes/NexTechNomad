@@ -1,0 +1,62 @@
+@import "@/app/styles/mixins.scss";
+.AboutSection {
+  //   background: #e0afaf;
+  @include adaptiveValue("padding-top", 200, 130, 0, 1920, 768);
+  @include adaptiveValue("padding-bottom", 200, 130, 0, 1920, 768);
+  @include adaptiveValue("margin-top", -200, -95, 0, 1920, 768);
+  p {
+    font-weight: 400;
+    text-align: center;
+    line-height: 110%;
+    max-width: 48%;
+    @media (max-width: 768px) {
+      line-height: 130%;
+      max-width: 80%;
+    }
+    @include adaptiveValue("font-size", 24, 14, 0, 1920, 768);
+  }
+  &__content {
+    position: relative;
+    z-index: 1;
+    .lineDecor {
+      border-radius: 134px;
+      width: 20%;
+      height: 4px;
+      background: linear-gradient(125deg, #fff 50%, #ffe603 100%);
+      @media (max-width: 768px) {
+        height: 2px;
+      }
+    }
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include adaptiveValue("gap", 45, 20, 0, 1920, 768);
+  }
+  position: relative;
+  overflow: hidden;
+}
+.decor {
+  img {
+    position: absolute;
+    &:nth-child(1) {
+      @include adaptiveValue("height", 1025, 425, 0, 1920, 768);
+      @include adaptiveValue("width", 672, 272, 0, 1920, 768);
+      right: 0;
+      bottom: -200px;
+      @media (max-width: 768px) {
+        bottom: -0px;
+        @include adaptiveValue("height", 325, 155, 0, 768, 320);
+        @include adaptiveValue("width", 172, 92, 0, 768, 320);
+      }
+    }
+    &:nth-child(2) {
+      transform: rotate(180deg);
+      left: -20px;
+      @include adaptiveValue("height", 725, 425, 0, 1920, 768);
+      @include adaptiveValue("width", 372, 272, 0, 1920, 768);
+      @include adaptiveValue("bottom", -350, -250, 0, 1920, 768);
+    }
+  }
+}

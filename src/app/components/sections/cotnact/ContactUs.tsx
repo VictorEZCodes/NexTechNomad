@@ -153,7 +153,7 @@ const ContactUs = () => {
           </div>
           <div className="contactUs__textarea">
             <textarea
-              placeholder="Your Masage"
+              placeholder="Your Message"
               rows={5}
               {...register("Masage", {
                 minLength: { message: "minimum masage length 3", value: 3 },
